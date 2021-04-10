@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | @yield('title')</title>
 
+@stack('prepend-style')
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ 'adminlte/plugins/fontawesome-free/css/all.min.css' }}">
+  <link rel="stylesheet" href="{{ asset('adminlte/plugins/fontawesome-free/css/all.min.css') }}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ 'adminlte/dist/css/adminlte.min.css' }}">
+  <link rel="stylesheet" href="{{ asset('adminlte/dist/css/adminlte.min.css') }}">
+@stack('addon-style')
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -45,13 +48,13 @@
 
 @stack('prepend-script')
 <!-- jQuery -->
-<script src="{{ 'adminlte/plugins/jquery/jquery.min.js' }}"></script>
+<script src="{{ asset('adminlte/plugins/jquery/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{ 'adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js' }}"></script>
+<script src="{{ asset('adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="{{ 'adminlte/dist/js/adminlte.min.js' }}"></script>
+<script src="{{ asset('adminlte/dist/js/adminlte.min.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{ 'adminlte/dist/js/demo.js' }}"></script>
+<script src="{{ asset('adminlte/dist/js/demo.js') }}"></script>
 @stack('addon-script')
 </body>
 </html>

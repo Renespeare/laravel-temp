@@ -26,3 +26,14 @@ Route::get('/table', function () {
 Route::get('/data-tables', function () {
     return view('tables.data-table');
 });
+
+Route::get('/cast', 'CastController@index');
+Route::post('/cast', 'CastController@store');
+
+Route::get('/cast/create', 'CastController@create');
+
+Route::get('/cast/{cast_id}', 'CastController@show');
+Route::delete('/cast/{cast_id}', 'CastController@destroy');
+
+Route::get('/cast/{cast_id}/edit', 'CastController@edit');
+Route::put('/cast/{cast_id}/edit', 'CastController@update');
